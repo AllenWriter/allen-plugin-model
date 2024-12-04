@@ -1,0 +1,41 @@
+version: 0.0.1
+type: plugin
+author: "langgenius"
+name: "anthropic"
+description:
+  en_US: "Anthropic's powerful language models, including Claude"
+  ja_JP: "Claude などの Anthropic の強力な言語モデル"
+  zh_Hans: "Anthropic 提供的强大语言模型，包括 Claude"
+  pt_BR: "Modelos de linguagem poderosos da Anthropic, incluindo Claude"
+label:
+  en_US: "Anthropic"
+  ja_JP: "Anthropic"
+  zh_Hans: "Anthropic"
+  pt_BR: "Anthropic"
+created_at: 2024-09-14T16:04:48.085858404-04:00
+icon: icon_s_en.svg
+resource:
+  memory: 1048576
+  permission:
+    tool:
+      enabled: true
+    model:
+      enabled: true
+      llm: true
+      text_embedding: false
+      rerank: false
+      tts: false
+      speech2text: false
+      moderation: false
+plugins:
+  models:
+    - "provider/anthropic.yaml"
+meta:
+  version: 0.0.1
+  arch:
+    - amd64
+    - arm64
+  runner:
+    language: python
+    version: "3.10"
+    entrypoint: main
